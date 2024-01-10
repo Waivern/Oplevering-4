@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Een memory spel">
+    <meta name="author" content="Marcel Bos">
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/images/favicon-16x16.png">
+    <link rel="manifest" href="Assets/images/site.webmanifest">
+
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Memory</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 10vw;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        #error {
+            color: #f44336;
+            display: none;
+        }
+
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <h2 class="navbar-brand"><img src="Assets/images/favicon-32x32.png"> Memory</h2>
+    </nav>
+    <div class="container-fluid" style="margin-top:1em">
+        <h2>Vul hier uw gegevens in</h2>
+
+        <form id="form" action="" method="post">
+            <div class="imgcontainer">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <p id="error">Gebruikersnaam of wachtwoord niet goed.</p>
+                <label for="username"><b>Gebruikersnaam:</b></label>
+                <input type="text" class="border" placeholder="Doe gebruikersnaam hier" name="username" required>
+
+                <label for="password"><b>Wachtwoord:</b></label>
+
+                <input type="password" class="border" placeholder="Wachtwoord hiero" name="password" required>
+
+
+
+            </div>
+        </form>
+    </div>
+    <div class="pop-up">
+        <div class="loader">
+
+
+        </div><h1 id="loadertext">Een ogenblik geduld, je spel wordt geladen.</h1>
+    </div>
+    <!--Footer menu-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+
+        <button type="button" class="btn btn-success" id="inloggen">Inloggen</button>
+        <button type="button" class="btn btn-warning" id="registreren">Aanmelden</button>
+
+
+
+    </nav>
+
+</body>
+</div>
+<!-- Globale variabelen -->
+<script src="assets/js/Game/globaleVariabelen.js"></script>
+<script src="Assets/js/Backend/login.js"></script>
+
+</html>

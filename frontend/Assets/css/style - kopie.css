@@ -1,0 +1,83 @@
+.gesloten {
+	background-color: #6F6D76; /* Kleur voor nog gesloten kaarten */
+	}
+
+.open {
+      background-color: #424D94; /* Kleur voor geopende kaarten */
+    }
+
+.gevonden {
+      background-color: #31AA31; /* Kleur voor gevonden kaarten */
+    }
+.Speelveld {
+
+  margin: auto;
+  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Kaarten {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+.titel {
+  
+  margin: auto;
+  width: 50%;
+  
+}
+.titel h1{
+	
+ color: darkblue;
+}
+
+.Kaart {
+  margin: 5px;
+  width: 80px; 
+  height:  80px; 
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  border: 1px solid #000;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size:45px;
+}
+
+.Kaart:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.Kaart.flip {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+      
+      .Kaarten {
+        overflow-x: auto; 
+        justify-content: flex-start; 
+      }
+	  .Kaart {
+		width: 60px; 
+		height:  60px; 
+		font-size:35px;
+      }
+    }
+
+@media screen and (max-width: 600px) {
+      .Kaart {
+       width: 40px; 
+	   height:  40px; 
+	   font-size:25px;
+      }
+    }
